@@ -68,9 +68,9 @@ export default (componentName, localTheme, options = {}) => (ThemedComponent) =>
       composeTheme: optionComposeTheme
     }
 
-    constructor(...args) {
-      super(...args)
-      this.theme_ = this.calcTheme(this.props)
+    constructor(props, ...args) {
+      super(props, ...args)
+      this.theme_ = this.calcTheme(props)
     }
 
     getWrappedInstance() {
